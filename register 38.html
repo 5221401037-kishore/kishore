@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+    body { background: #1e90ff; font-family: sans-serif; }
+    .box {
+      width: 350px; margin: 50px auto; background: #fff; padding: 20px; border-radius: 10px;
+    }
+    h2 { text-align: center; color: #1e90ff; }
+    input, textarea, select {
+      width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box;
+    }
+    button {
+      width: 100%; padding: 10px; background: #4179b1; color: #fff; border: none; font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Register</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="date" required>
+      <textarea rows="2" placeholder="Address" required></textarea>
+      
+      <!-- Gender as filter -->
+      <select required>
+        <option value="" disabled selected>Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <button type="submit">Submit</button> 
+      <br><a href="index.html" target="new" >Go to Homepage</a>
+    </form>
+  </div>
+ 
+</body>
+</html>

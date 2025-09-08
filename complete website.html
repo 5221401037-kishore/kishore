@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset defaults */
+        * {
+           margin: 0; 
+           padding: 0;
+           box-sizing: border-box;
+        }
+
+        /* Horizontal Top Navigation */
+        nav.top-nav {
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+         }
+        nav.top-nav a {
+            color: black;
+            text-decoration: none;
+            padding: 26px 20px;
+            display: inline-block;
+            font-weight: bold;
+        } 
+        nav.top-nav a:hover {
+            background-color: brown;
+        }
+
+        /* vertical sidebar */
+        nav.side-nav {
+            background-color: chocolate;
+            position: fixed;
+            top: 50px; /* pushes it below horizontal nav */
+            left: 0;
+            width: 200px;
+            text-decoration: none;
+            padding: 12px 16px;
+            height: calc(100vh - 50px);
+            
+        }
+        nav.side-nav a{
+
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 12px 16px;
+            font-weight: bold;
+
+        }
+        nav.side-nav a:hover{
+            background-color: #555;
+            color: white;
+
+
+    
+        }
+
+        /* Main content adjusted to sidebar */
+        .main-content {
+            margin-top: 50px;
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+ </style>
+</head>
+<body>
+
+
+    <!--horizontal top navigation -->
+    <nav class="top-nav">
+        <a href="https://www.bing.com/ck/a?!&&p=f99b597af499f51643ccff852d09a2fd803eacf3997bfd89c5458266384eb44aJmltdHM9MTc1NDc4NDAwMA&ptn=3&ver=2&hsh=4&fclid=122e0fd1-084a-6e07-2508-1ba3092a6f2b&psq=home+pages+of+websites&u=a1aHR0cHM6Ly85OWRlc2lnbnMuY29tL2luc3BpcmF0aW9uL3dlYnNpdGVzL2hvbWVwYWdl&ntb=1">Home</a>
+        <a href="https://www.bing.com/ck/a?!&&p=b8f5c26996e65ac197b1da595d9f9e525b5a957fe973e9978a7bfc9c89eead34JmltdHM9MTc1NDc4NDAwMA&ptn=3&ver=2&hsh=4&fclid=122e0fd1-084a-6e07-2508-1ba3092a6f2b&psq=mega+projects+in+india&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTGlzdF9vZl9tZWdhcHJvamVjdHNfaW5fSW5kaWE&ntb=1">Projects</a>
+        <a href="https://www.bing.com/aclk?ld=e8iCfoKSaV_cso4BbXQnRNTzVUCUwWVxF-NN4krT1RPnya3i088-Q8IXoYGi39Iy00ABteGHyMyWnCZs6C-mYOnPEoJDRuk6hCG-sLJ4r6kt3FF8OJ79qVbN0WJBUnVCgvJtgd-V-XeJrw8GiHbNAapeRfayHPj8L2ZX5Sl8ZxFbtEvIdZzPHjM4OxUJ_lEnUi74LbTw&u=aHR0cHMlM2ElMmYlMmZ3d3cudWRlbXkuY29tJTJmY291cnNlJTJmYnVpbGQtcmVhY3QtZGV2ZWxvcG1lbnQtcHJvamVjdHMlMmYlM2Z1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2R1ZGVteWFkcyUyNnV0bV9jYW1wYWlnbiUzZEJHLVNlYXJjaF9EU0FfQWxwaGFfUHJvZl9sYS5FTl9jYy5JbmRpYSUyNmNhbXBhaWdudHlwZSUzZFNlYXJjaCUyNnBvcnRmb2xpbyUzZEJpbmctSW5kaWElMjZsYW5ndWFnZSUzZEVOJTI2cHJvZHVjdCUzZENvdXJzZSUyNnRlc3QlM2QlMjZhdWRpZW5jZSUzZERTQSUyNnRvcGljJTNkUmVhY3RfSlMlMjZwcmlvcml0eSUzZEFscGhhJTI2dXRtX2NvbnRlbnQlM2RkZWFsNDU4NCUyNnV0bV90ZXJtJTNkXy5fYWdfMTMxOTQxNjM0MTUyNDU1MF8uX2FkX18uX2t3X1JlYWN0JTI1MjBKUyUyNTIwZW5fLl9kZV9jXy5fZG1fXy5fcGxfXy5fdGlfZGF0LTIzMzQyNjMxODY0MjI1NDclM2Fsb2MtOTBfLl9saV8xNDM5NjFfLl9wZF9fLl8lMjZtYXRjaHR5cGUlM2RiJTI2bXNjbGtpZCUzZDFmY2I5MDJkNDA1YTFlZWU5NWZiZjhiNDM4YmY2NDMx&rlid=1fcb902d405a1eee95fbf8b438bf6431&ntb=1">Corses</a>
+        <a href="https://www.bing.com/ck/a?!&&p=941367deb3b67631dd627b438700720f79aab69578cc4139a80b47dcb87f5d98JmltdHM9MTc1NDc4NDAwMA&ptn=3&ver=2&hsh=4&fclid=122e0fd1-084a-6e07-2508-1ba3092a6f2b&psq=careers+of+mega+projets+in+india&u=a1aHR0cHM6Ly93d3cuaW52ZXN0aW5kaWEuZ292LmluL3RlYW0taW5kaWEtYmxvZ3MvMTAtaW5kaWFuLW1lZ2EtcHJvamVjdHMtYXJlLXJlZGVmaW5pbmctaW5mcmFzdHJ1Y3R1cmUtMjAyNQ&ntb=1">Careers</a>
+        <a href="https://www.bing.com/ck/a?!&&p=564173a0e34aad8561a4145eabc072c2495caf4d209a9d4b0c58701f0b98555dJmltdHM9MTc1NDc4NDAwMA&ptn=3&ver=2&hsh=4&fclid=122e0fd1-084a-6e07-2508-1ba3092a6f2b&psq=contacts+of++mega+projets+in+india+pdf&u=a1aHR0cHM6Ly93d3cubW9mcGkuZ292LmluL3NpdGVzL2RlZmF1bHQvZmlsZXMvUE1DTGlzdC1NZWdhRm9vZFBhcmsucGRmLnBkZg&ntb=1">contacts us</a>
+    </nav>
+    
+    <!--Vertical Top Navigation-->
+        <nav class="side-nav">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Corses</a>
+        <a href="#">Careers</a>
+        <a href="#">contacts us</a>
+    </nav>
+
+    <!--Main content Area-->
+    <div class="main-content">
+        <h1>Welcome to the DARMA Industries</h1>
+        
+        <p>This section remains visible the sidebar and below the top navigatin</p>
+      
+    </div>
+
+</body>
+</html>
